@@ -60,6 +60,7 @@ checkPackage("pcl_conversions" "")
 checkPackage("nodelet" "")
 checkPackage("tf2_geometry_msgs" "")
 
+
 generate_dynamic_reconfigure_options(
   cfg/Zed.cfg
 )
@@ -101,7 +102,7 @@ link_directories(${PCL_LIBRARY_DIRS})
 
 if(NOT DEFINED CUDA_NPP_LIBRARIES_ZED)
     #To deal with cuda 9 nppi libs and previous versions of ZED SDK
-    set(CUDA_NPP_LIBRARIES_ZED ${CUDA_npp_LIBRARY} ${CUDA_npps_LIBRARY} ${CUDA_nppi_LIBRARY})   
+    set(CUDA_NPP_LIBRARIES_ZED ${CUDA_npp_LIBRARY} ${CUDA_npps_LIBRARY} ${CUDA_nppi_LIBRARY})
 endif()
 
 
